@@ -19,6 +19,8 @@ const resetGame = () => {
     turnO = true;
     countClick=0;
     enableBoxes();
+    msg.innerText="";
+    
     msgContainer.classList.add("hide");
 }
 boxes.forEach((box)=>{
@@ -44,6 +46,8 @@ const enableBoxes = () => {
         box.disabled = false;
         box.innerText = "";
     }
+    msg.innerText = "";
+    msgContainer.classList.add("hide");
 }
 const disableBoxes = () => {
     for(let box of boxes){
